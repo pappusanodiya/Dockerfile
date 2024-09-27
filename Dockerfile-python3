@@ -1,0 +1,12 @@
+FROM pappusanodiya/yum-centos:v1
+
+RUN yum install python3 -y 
+
+RUN mkdir /code
+
+COPY my.py /code/
+
+COPY hellp.py /code/
+COPY lw.py /code/
+
+ENTRYPOINT date
