@@ -1,0 +1,10 @@
+FROM pappusanodiya/yum-centos:v1
+
+RUN yum install httpd -y 
+
+copy *.html /var/www/html/
+
+EXPOSE 80
+
+ENTRYPOINT [ "httpd" ]
+CMD [ "-DFOREGROUND" ]
